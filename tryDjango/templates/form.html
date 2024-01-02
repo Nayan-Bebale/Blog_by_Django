@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+<!-- {% block head_title %} Contact page {% endblock %} -->
+
+
+{% block content %}
+
+    <form method="post" action="." enctype="multipart/form-data"> {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+    </form>
+{% endblock %}
